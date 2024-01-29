@@ -13,95 +13,101 @@
             <h1>Ottawa Groceries</h1>
         </header>
 
-        <nav>
-            <a href="#" onclick="showSection('section1')">Customer</a>
-            <a href="#" onclick="showSection('section2')">Products</a>
-            <a href="#" onclick="showSection('section3')">Cart</a>
-        </nav>
-
-        <section id="section1">
-            <h2>Customer</h2>
-            <label>Select all that are true.</label>
-            <label>
-                <input type="checkbox" name="veggie" value="veggie">You are vegetarian.
-            </label>
-            <label>
-                <input type="checkbox" name="gluten" value="gluten">You are allergic to gluten.
-            </label>
-            <label>
-                <input type="checkbox" name="organic" value="organic">
-                You are only looking for organic products.
-            </label>
-
-            <br>
-            <button type="button" id="submitButton" onclick="showSection('section2')" class = "styled-button">Submit</button>
-        </section>
-
-        <section id="section2">
-            <h2>Products</h2>
-
-            <form id="groceryForm">
-                <h2>Select Grocery Items:</h2>
-
-                <!-- Organic Data -->
-                <div class="item-category" id="organicData" style="display: none;">
-                    <script>generateItems('Organic', ['Bananas', 'Apples', 'Grapes'], [1.50, 1.90, 2.20], ['https://images.immediate.co.uk/production/volatile/sites/30/2017/01/Bunch-of-bananas-67e91d5.jpg?quality=90&resize=440,400', 'https://www.applesfromny.com/wp-content/uploads/2020/05/20Ounce_NYAS-Apples2.png', 'https://www.cartly.ca/cdn/shop/products/image_22f97cea-21d2-4d5b-95c9-1e17208ed84e.jpg?v=1647206562']);</script>
-                </div>
-
-                <!-- Non-organic Data -->
-                <div class="item-category" id="non-organicData" style="display: block;">
-                    <script>generateItems('Non-organic', ['Bananas', 'Apples', 'Grapes'], [1.20, 1.60, 2.00], ['https://images.immediate.co.uk/production/volatile/sites/30/2017/01/Bunch-of-bananas-67e91d5.jpg?quality=90&resize=440,400', 'https://www.applesfromny.com/wp-content/uploads/2020/05/20Ounce_NYAS-Apples2.png', 'https://www.cartly.ca/cdn/shop/products/image_22f97cea-21d2-4d5b-95c9-1e17208ed84e.jpg?v=1647206562']);</script>
-                </div>
-
-                <!-- Gluten Data -->
-                <div class="item-category" id="glutenData" style="display: none;">
-                    <script>generateItems('Gluten', ['Tortilla', 'Bread', 'Muffins'], [2.50, 3.00, 5.00], ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Mexican_tortilla.jpg/640px-Mexican_tortilla.jpg', 'https://assets.bonappetit.com/photos/5c62e4a3e81bbf522a9579ce/16:9/w_4000,h_2250,c_limit/milk-bread.jpg', 'https://www.inspiredtaste.net/wp-content/uploads/2023/11/Easy-Blueberry-Muffin-Recipe-Video.jpg']);</script>
-                </div>
-
-                <!-- Non-gluten Data -->
-                <div class="item-category" id="non-glutenData" style="display: block;">
-                    <script>generateItems('Non-gluten', ['Tortilla', 'Bread', 'Muffins'], [2.50, 2.75, 4.00], ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Mexican_tortilla.jpg/640px-Mexican_tortilla.jpg', 'https://assets.bonappetit.com/photos/5c62e4a3e81bbf522a9579ce/16:9/w_4000,h_2250,c_limit/milk-bread.jpg', 'https://www.inspiredtaste.net/wp-content/uploads/2023/11/Easy-Blueberry-Muffin-Recipe-Video.jpg']);</script>
-                </div>
-
-                <!-- Veggie Data -->
-                <div class="item-category" id="veggieData" style="display: none;">
-                    <script>generateItems('Veggie', ['Tofu', 'Flavoured Tofu Cubes', 'Salad Bowl', 'Acai Bowl'], [5.50, 6.00, 7.00, 8.00], ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Japanese_SilkyTofu_%28Kinugoshi_Tofu%29.JPG/220px-Japanese_SilkyTofu_%28Kinugoshi_Tofu%29.JPG', 'https://sarahsvegankitchen.b-cdn.net/wp-content/uploads/2022/12/homemade-tofu-2-scaled.jpg', 'https://cdn.loveandlemons.com/wp-content/uploads/2021/04/green-salad.jpg', 'https://healthfulblondie.com/wp-content/uploads/2022/06/Homemade-Healthy-Protein-Acai-Bowl.jpg']);</script>
-                </div>
-
-                <!-- Non-veggie Data -->
-                <div class="item-category" id="non-veggieData" style="display: block;">
-                    <script>generateItems('Non-veggie', ['Chicken Thighs', 'Chicken Breast', 'Ground Beef', 'Steak'], [5.50, 6.00, 7.00, 8.00], ['https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2019/02/Crispy-Baked-Chicken-Thighs-6.jpg', 'https://www.allrecipes.com/thmb/Sy-9MO1rGdtsMXvCariknBMOlgw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/240208-simple-baked-chicken-breasts-DDMFS-4x3-74f701fc875a4af4be7ef889185c5f41.jpg', 'https://feelgoodfoodie.net/wp-content/uploads/2023/04/How-to-Brown-Ground-Beef-Square.jpg', 'https://assets-jpcust.jwpsrv.com/thumbnails/823h59qm-720.jpg']);</script>
-                </div>
+        <div class="navbar">
+            <div class="sectionLabel" id="profile" onclick="showSection('section1')">
+                <h3>Profile</h3>
+            </div>
+            <div class="sectionLabel" id="shop" onclick="showSection('section2')">
+                <h3>Shop</h3>
+            </div>
+            <div class="sectionLabel" id="myCart" onclick="showSection('section3')">
+                <h3>My Cart</h3>
+            </div>
+        </div>
+        <div class = "content">
+            <section id="section1">
+                <h2>Customer</h2>
+                <label>Select all that are true.</label>
+                <label>
+                    <input type="checkbox" name="veggie" value="veggie">You are vegetarian.
+                </label>
+                <label>
+                    <input type="checkbox" name="gluten" value="gluten">You are allergic to gluten.
+                </label>
+                <label>
+                    <input type="checkbox" name="organic" value="organic">
+                    You are only looking for organic products.
+                </label>
 
                 <br>
+                <button type="button" id="submitButton" onclick="showSection('section2')" class = "styled-button">Submit</button>
+            </section>
 
-                <button type="button" id="addToCartButton" onclick="addToCart()" class="styled-button">Add to cart</button>
-            </form>
+            <section id="section2">
+                <h2>Products</h2>
 
-        </section>
+                <form id="groceryForm">
+                    <h2>Select Grocery Items:</h2>
+
+                    <!-- Organic Data -->
+                    <div class="item-category" id="organicData" style="display: none;">
+                        <script>generateItems('Organic', ['Bananas', 'Apples', 'Grapes'], [1.50, 1.90, 2.20], ['https://images.immediate.co.uk/production/volatile/sites/30/2017/01/Bunch-of-bananas-67e91d5.jpg?quality=90&resize=440,400', 'https://www.applesfromny.com/wp-content/uploads/2020/05/20Ounce_NYAS-Apples2.png', 'https://www.cartly.ca/cdn/shop/products/image_22f97cea-21d2-4d5b-95c9-1e17208ed84e.jpg?v=1647206562']);</script>
+                    </div>
+
+                    <!-- Non-organic Data -->
+                    <div class="item-category" id="non-organicData" style="display: block;">
+                        <script>generateItems('Non-organic', ['Bananas', 'Apples', 'Grapes'], [1.20, 1.60, 2.00], ['https://images.immediate.co.uk/production/volatile/sites/30/2017/01/Bunch-of-bananas-67e91d5.jpg?quality=90&resize=440,400', 'https://www.applesfromny.com/wp-content/uploads/2020/05/20Ounce_NYAS-Apples2.png', 'https://www.cartly.ca/cdn/shop/products/image_22f97cea-21d2-4d5b-95c9-1e17208ed84e.jpg?v=1647206562']);</script>
+                    </div>
+
+                    <!-- Gluten Data -->
+                    <div class="item-category" id="glutenData" style="display: none;">
+                        <script>generateItems('Gluten', ['Tortilla', 'Bread', 'Muffins'], [2.50, 3.00, 5.00], ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Mexican_tortilla.jpg/640px-Mexican_tortilla.jpg', 'https://assets.bonappetit.com/photos/5c62e4a3e81bbf522a9579ce/16:9/w_4000,h_2250,c_limit/milk-bread.jpg', 'https://www.inspiredtaste.net/wp-content/uploads/2023/11/Easy-Blueberry-Muffin-Recipe-Video.jpg']);</script>
+                    </div>
+
+                    <!-- Non-gluten Data -->
+                    <div class="item-category" id="non-glutenData" style="display: block;">
+                        <script>generateItems('Non-gluten', ['Tortilla', 'Bread', 'Muffins'], [2.50, 2.75, 4.00], ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Mexican_tortilla.jpg/640px-Mexican_tortilla.jpg', 'https://assets.bonappetit.com/photos/5c62e4a3e81bbf522a9579ce/16:9/w_4000,h_2250,c_limit/milk-bread.jpg', 'https://www.inspiredtaste.net/wp-content/uploads/2023/11/Easy-Blueberry-Muffin-Recipe-Video.jpg']);</script>
+                    </div>
+
+                    <!-- Veggie Data -->
+                    <div class="item-category" id="veggieData" style="display: none;">
+                        <script>generateItems('Veggie', ['Tofu', 'Flavoured Tofu Cubes', 'Salad Bowl', 'Acai Bowl'], [5.50, 6.00, 7.00, 8.00], ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Japanese_SilkyTofu_%28Kinugoshi_Tofu%29.JPG/220px-Japanese_SilkyTofu_%28Kinugoshi_Tofu%29.JPG', 'https://sarahsvegankitchen.b-cdn.net/wp-content/uploads/2022/12/homemade-tofu-2-scaled.jpg', 'https://cdn.loveandlemons.com/wp-content/uploads/2021/04/green-salad.jpg', 'https://healthfulblondie.com/wp-content/uploads/2022/06/Homemade-Healthy-Protein-Acai-Bowl.jpg']);</script>
+                    </div>
+
+                    <!-- Non-veggie Data -->
+                    <div class="item-category" id="non-veggieData" style="display: block;">
+                        <script>generateItems('Non-veggie', ['Chicken Thighs', 'Chicken Breast', 'Ground Beef', 'Steak'], [5.50, 6.00, 7.00, 8.00], ['https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2019/02/Crispy-Baked-Chicken-Thighs-6.jpg', 'https://www.allrecipes.com/thmb/Sy-9MO1rGdtsMXvCariknBMOlgw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/240208-simple-baked-chicken-breasts-DDMFS-4x3-74f701fc875a4af4be7ef889185c5f41.jpg', 'https://feelgoodfoodie.net/wp-content/uploads/2023/04/How-to-Brown-Ground-Beef-Square.jpg', 'https://assets-jpcust.jwpsrv.com/thumbnails/823h59qm-720.jpg']);</script>
+                    </div>
+
+                    <br>
+
+                    <button type="button" id="addToCartButton" onclick="addToCart()" class="styled-button">Add to cart</button>
+                </form>
+
+            </section>
 
 
-        <section id="section3">
-            <h2>Cart</h2>
+            <section id="section3">
+                <h2>Cart</h2>
 
-            <table id="shoppingCart">
-                <thead>
-                    <tr>
-                        <th>Item</th>
-                        <th>Quantity</th>
-                        <th>Unit Price</th>
-                        <th>Batch Price</th>
-                    </tr>
-                </thead>
-                <tbody id="shoppingCartBody"></tbody>
-            </table>
+                <table id="shoppingCart">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Unit Price</th>
+                            <th>Batch Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="shoppingCartBody"></tbody>
+                </table>
 
-            <div class="total">
-                <p>Total Cost: $0.00</p>
-            </div>
+                <div class="total">
+                    <p>Total Cost: $0.00</p>
+                </div>
 
-        </section>
-
+            </section>
+        </div>
         <footer>
             Designed by Saad Mazhar (300249820), Justin Bushfield (300188318), and Oscar Law (300306180)
         </footer>
