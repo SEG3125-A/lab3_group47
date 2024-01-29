@@ -10,6 +10,7 @@ header {
     color: #fff;
     text-align: center;
     padding: 10px;
+    background-image: url('header.jpg');
 }
 
 .navbar {
@@ -59,6 +60,7 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
 
 /* Reset some default styles */
 body, h1, h2, p, form {
