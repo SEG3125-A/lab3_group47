@@ -13,7 +13,7 @@ header {
     color: #fff;
     text-align: center;
     padding: 20px;
-    background-image: url('header.jpg');
+    background-image: url('images/header.jpg');
 }
 
 .navbar {
@@ -83,9 +83,6 @@ label {
     margin-bottom: 10px;
 }
 
-input[type="checkbox"] {
-    margin-right: 5px;
-}
 
 select,
 input[type="submit"] {
@@ -126,14 +123,6 @@ th {
     text-align: right;
 }
 
-#section1 {
-    display: block;
-}
-
-#section2 {
-    padding-bottom: 2%;
-}
-
 .styled-button {
     background-color: #3498db;
     color: white;
@@ -145,4 +134,13 @@ th {
 
 .styled-button:hover {
     background-color: #2980b9;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }

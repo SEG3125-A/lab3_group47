@@ -7,11 +7,10 @@ function generateItems(category, items, prices, imageUrls) {
     for (var i = 0; i < items.length; i++) {
         // Create item with info and write it to the DOM
         document.write(`
+            <img src="${imageUrls[i]}" alt="${items[i]} Image" style="width: 200px; height: 200px;">
             <label>
                 <input type="checkbox" name="item[${category}][${items[i]}][selected]" value="1" data-price="${prices[i]}">
                 ${items[i]} - $${parseFloat(prices[i]).toFixed(2)}
-                <br>
-                <img src="${imageUrls[i]}" alt="${items[i]} Image" style="width: 200px; height: 200px;">
             </label>
             <label>
                 Quantity:

@@ -4,8 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ottawa Groceries</title>
+
         <link rel="stylesheet" type="text/css" href="styles.css" />
-        <link rel="icon" href="favicon.png">
+        <link rel="stylesheet" type="text/css" href="sectionOneStyles.css" />
+        <link rel="stylesheet" type="text/css" href="sectionTwoStyles.css" />
+        <link rel="stylesheet" type="text/css" href="sectionThreeStyles.css" />
+        <link rel="icon" href="images/favicon.png">
+
         <script src="actions.js"></script>
     </head>
     <body>
@@ -25,19 +30,24 @@
                 <h3>My Cart</h3>
             </div>
         </div>
+
         <div class = "content">
             <section id="section1">
-                <h2>Customer</h2>
-                <label>Select all that are true.</label>
-                <label>
-                    <input type="checkbox" name="veggie" value="veggie">You are vegetarian.
+                <div class="sectionHeader">
+                    <h2>My Profile</h2>
+                </div>
+                <div class="text">Select all that are true.</div>
+                <label class="container">You are vegetarian.
+                    <input type="checkbox" name="veggie" value="veggie">
+                    <span class="checkmark"></span>
                 </label>
-                <label>
-                    <input type="checkbox" name="gluten" value="gluten">You are allergic to gluten.
+                <label class="container">You are allergic to gluten.
+                    <input type="checkbox" name="gluten" value="gluten">
+                    <span class="checkmark"></span>
                 </label>
-                <label>
+                <label class="container">You are only looking for organic products.
                     <input type="checkbox" name="organic" value="organic">
-                    You are only looking for organic products.
+                    <span class="checkmark"></span>
                 </label>
 
                 <br>
