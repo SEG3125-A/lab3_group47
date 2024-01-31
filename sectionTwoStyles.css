@@ -1,0 +1,25 @@
+#section2 {
+    padding-bottom: 2%;
+}
+
+#section2 input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+#section2 .item-container {
+    display: flex;
+    height: 200px;
+    width: 800px;
+    background-color: yellow;
+    margin-bottom: 10px;
+    transform: (00%, 50%);
+}
+
+#section2 .styled-button {
+    position: relative;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    height: 75px;
+    width: 150px;
+}
